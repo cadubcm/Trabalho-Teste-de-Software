@@ -1,0 +1,603 @@
+{
+	"id": "a7a7548a-4cb3-47d9-9dbe-0fa922b6ad47",
+	"name": "Post-its",
+	"timestamp": "2025-06-13T01:47:29.544Z",
+	"collection_id": "45723683-3ce3837e-e5d4-4851-8955-a4e733810369",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 25,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-06-13T01:47:27.581Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "b0da007e-863c-44e1-ac10-4050243bacf3",
+			"name": "Registro bem-sucedido",
+			"url": "http://localhost:3000/api/register",
+			"time": 97,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Resposta contém success true": true,
+				"Resposta contém userId": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resposta contém success true": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resposta contém userId": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				97
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Resposta contém success true": true,
+					"Resposta contém userId": true
+				}
+			]
+		},
+		{
+			"id": "f1698dc3-1f34-4413-8310-661677b090db",
+			"name": "Registro com usuário existente",
+			"url": "http://localhost:3000/api/register",
+			"time": 6,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {
+				"Status code é 409": true
+			},
+			"testPassFailCounts": {
+				"Status code é 409": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code é 409": true
+				}
+			]
+		},
+		{
+			"id": "0fcc8021-7efd-41b9-a9f8-a57d71ec7f80",
+			"name": "Registro com dados incompletos",
+			"url": "http://localhost:3000/api/register",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code é 400": true
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code é 400": true
+				}
+			]
+		},
+		{
+			"id": "527d2fcf-8c21-46a2-9a7c-27db301eadb8",
+			"name": "Login bem-sucedido",
+			"url": "http://localhost:3000/api/login",
+			"time": 63,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Resposta contém token": true,
+				"Resposta contém dados do usuário": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resposta contém token": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resposta contém dados do usuário": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				63
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Resposta contém token": true,
+					"Resposta contém dados do usuário": true
+				}
+			]
+		},
+		{
+			"id": "89795f8a-e921-4422-a635-b1ba1631ad3b",
+			"name": "Login com dados inválidos",
+			"url": "http://localhost:3000/api/login",
+			"time": 61,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code é 401": true
+			},
+			"testPassFailCounts": {
+				"Status code é 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				61
+			],
+			"allTests": [
+				{
+					"Status code é 401": true
+				}
+			]
+		},
+		{
+			"id": "1940cb3b-07d2-4cd5-8365-5a34b9426efa",
+			"name": "Login sem dados",
+			"url": "http://localhost:3000/api/login",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code é 400": true
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code é 400": true
+				}
+			]
+		},
+		{
+			"id": "b2b85c0f-10d4-4964-b77b-7666c56f4cfc",
+			"name": "Listar post-its",
+			"url": "http://localhost:3000/api/postits",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Resposta é um array": true,
+				"Post-its têm estrutura correta": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Resposta é um array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Post-its têm estrutura correta": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Resposta é um array": true,
+					"Post-its têm estrutura correta": true
+				}
+			]
+		},
+		{
+			"id": "51495881-1acc-4bfa-9035-08c6ac84fd66",
+			"name": "Criar post-it bem sucedido",
+			"url": "http://localhost:3000/api/postits",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Post-it criado com dados corretos": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Post-it criado com dados corretos": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Post-it criado com dados corretos": true
+				}
+			]
+		},
+		{
+			"id": "75e84692-2af7-486f-9352-8362e430c466",
+			"name": "Criar post-it com dados mínimos",
+			"url": "http://localhost:3000/api/postits",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code é 200": false
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code é 200": false
+				}
+			]
+		},
+		{
+			"id": "d0a4af3f-9c43-42aa-b6e9-4a3e670f42ba",
+			"name": "Criar post-it no limite",
+			"url": "http://localhost:3000/api/postits",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code é 400": true
+			},
+			"testPassFailCounts": {
+				"Status code é 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code é 400": true
+				}
+			]
+		},
+		{
+			"id": "637894b7-5741-43ca-8410-46015984965b",
+			"name": "Atualizar Post-it",
+			"url": "http://localhost:3000/api/postits/23",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Post-it atualizado corretamente": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Post-it atualizado corretamente": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Post-it atualizado corretamente": true
+				}
+			]
+		},
+		{
+			"id": "4e792b46-8467-42dc-ab38-a6608f3fab8e",
+			"name": "Deletar Post-it",
+			"url": "http://localhost:3000/api/postits/23",
+			"time": 12,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code é 200": true,
+				"Mensagem de sucesso retornada": true
+			},
+			"testPassFailCounts": {
+				"Status code é 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Mensagem de sucesso retornada": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				12
+			],
+			"allTests": [
+				{
+					"Status code é 200": true,
+					"Mensagem de sucesso retornada": true
+				}
+			]
+		},
+		{
+			"id": "a858d587-112b-497c-8264-7f44d5fb3c87",
+			"name": "Deletar Post-it Inexistente",
+			"url": "http://localhost:3000/api/postits/99999",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code é 404": true
+			},
+			"testPassFailCounts": {
+				"Status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code é 404": true
+				}
+			]
+		},
+		{
+			"id": "7f179507-6d9e-47f5-b635-9669ff16bb0c",
+			"name": "Listar post-it com token inválido",
+			"url": "http://localhost:3000/api/postits",
+			"time": 3,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Status code é 403": true
+			},
+			"testPassFailCounts": {
+				"Status code é 403": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code é 403": true
+				}
+			]
+		},
+		{
+			"id": "919c3ff2-4d4d-4f7e-bbec-2102fc66b0af",
+			"name": "Listar post-it sem autorização",
+			"url": "http://localhost:3000/api/postits",
+			"time": 2,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code é 401": true
+			},
+			"testPassFailCounts": {
+				"Status code é 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code é 401": true
+				}
+			]
+		},
+		{
+			"id": "79f9b0e4-16eb-4f14-ab56-935560c63a38",
+			"name": "Atualizar Post-it Inexistente",
+			"url": "http://localhost:3000/api/postits/99999",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code é 404": true
+			},
+			"testPassFailCounts": {
+				"Status code é 404": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code é 404": true
+				}
+			]
+		},
+		{
+			"id": "9ec0716d-d2a1-4bfb-b83c-acc42746bac6",
+			"name": "Deletar Post-it Sem Autenticação",
+			"url": "http://localhost:3000/api/postits/23",
+			"time": 2,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code é 401": true
+			},
+			"testPassFailCounts": {
+				"Status code é 401": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code é 401": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 298,
+	"collection": {
+		"requests": [
+			{
+				"id": "b0da007e-863c-44e1-ac10-4050243bacf3",
+				"method": "POST"
+			},
+			{
+				"id": "f1698dc3-1f34-4413-8310-661677b090db",
+				"method": "POST"
+			},
+			{
+				"id": "0fcc8021-7efd-41b9-a9f8-a57d71ec7f80",
+				"method": "POST"
+			},
+			{
+				"id": "527d2fcf-8c21-46a2-9a7c-27db301eadb8",
+				"method": "POST"
+			},
+			{
+				"id": "89795f8a-e921-4422-a635-b1ba1631ad3b",
+				"method": "POST"
+			},
+			{
+				"id": "1940cb3b-07d2-4cd5-8365-5a34b9426efa",
+				"method": "POST"
+			},
+			{
+				"id": "b2b85c0f-10d4-4964-b77b-7666c56f4cfc",
+				"method": "GET"
+			},
+			{
+				"id": "51495881-1acc-4bfa-9035-08c6ac84fd66",
+				"method": "POST"
+			},
+			{
+				"id": "75e84692-2af7-486f-9352-8362e430c466",
+				"method": "POST"
+			},
+			{
+				"id": "d0a4af3f-9c43-42aa-b6e9-4a3e670f42ba",
+				"method": "POST"
+			},
+			{
+				"id": "637894b7-5741-43ca-8410-46015984965b",
+				"method": "PUT"
+			},
+			{
+				"id": "4e792b46-8467-42dc-ab38-a6608f3fab8e",
+				"method": "DELETE"
+			},
+			{
+				"id": "a858d587-112b-497c-8264-7f44d5fb3c87",
+				"method": "DELETE"
+			},
+			{
+				"id": "7f179507-6d9e-47f5-b635-9669ff16bb0c",
+				"method": "GET"
+			},
+			{
+				"id": "919c3ff2-4d4d-4f7e-bbec-2102fc66b0af",
+				"method": "GET"
+			},
+			{
+				"id": "79f9b0e4-16eb-4f14-ab56-935560c63a38",
+				"method": "PUT"
+			},
+			{
+				"id": "9ec0716d-d2a1-4bfb-b83c-acc42746bac6",
+				"method": "DELETE"
+			}
+		]
+	}
+}
