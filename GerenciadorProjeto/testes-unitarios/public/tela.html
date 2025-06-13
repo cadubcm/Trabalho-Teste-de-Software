@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestão de Processos com Post-its</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <div id="auth-container" class="page">
+    <div id="selection-page">
+      <i class="fas fa-clipboard-check auth-icon"></i>
+      <h2>Bem-vindo!</h2>
+      <p>Gerencie suas tarefas de forma simples e visual.</p>
+      <div class="selection-buttons">
+        <button onclick="showRegister()"><i class="fas fa-user-plus"></i> Novo Usuário</button>
+        <button onclick="showLogin()"><i class="fas fa-sign-in-alt"></i> Já Sou Cadastrado</button>
+      </div>
+    </div>
+
+    <div id="login-page" style="display: none;">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Usuário" autocomplete="username" />
+      <input type="password" id="login-password" placeholder="Senha" autocomplete="current-password" />
+      <button class="auth-button" onclick="login()">Entrar</button>
+      <a href="#" class="back-link" onclick="showSelection()">&laquo; Voltar</a>
+    </div>
+
+    <div id="register-page" style="display: none;">
+      <h2>Criar Conta</h2>
+      <input type="text" id="register-username" placeholder="Escolha um usuário" autocomplete="username" />
+      <input type="password" id="register-password" placeholder="Crie uma senha" autocomplete="new-password" />
+      <button class="auth-button" onclick="register()">Registrar e Entrar</button>
+      <a href="#" class="back-link" onclick="showSelection()">&laquo; Voltar</a>
+    </div>
+  </div>
+
+
+  <div id="board-page" class="page" style="display: none;">
+    <div class="header">
+      <h2 id="board-title">Quadro de Post-its</h2>
+      <button class="logout-button" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+
+    <div class="controls">
+      <select id="color-select">
+        <option value="red">Alerta Importante</option>
+        <option value="blue">Próxima Semana</option>
+        <option value="yellow">Prazo de 1 Mês</option>
+        <option value="green">Trabalho Individual</option>
+      </select>
+      <button onclick="addPostIt()"><i class="fas fa-plus"></i> Adicionar Post-it</button>
+    </div>
+
+    <div id="board" class="board"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
