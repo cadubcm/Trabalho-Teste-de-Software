@@ -1,0 +1,246 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e9e9e9;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.page {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgb(0 0 0 / 0.2);
+  width: 400px;
+  margin: auto;
+  margin-top: 10vh;
+}
+
+.board-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+#login-page h2,
+#board-page h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+#login-page input[type="text"],
+#login-page input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#login-page input[type="text"]:focus,
+#login-page input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#login-page button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+#login-page button:hover {
+  background-color: #0056b3;
+}
+
+#login-page button.register-btn {
+  background-color: #28a745;
+}
+
+#login-page button.register-btn:hover {
+  background-color: #1e7e34;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info span {
+  color: #666;
+  font-weight: 500;
+}
+
+.header button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.header button:hover {
+  background-color: #a71d2a;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.controls select,
+.controls button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.controls select:focus,
+.controls button:hover {
+  border-color: #007bff;
+}
+
+.controls button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: 600;
+}
+
+.board {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.postit {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 15px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 140px;
+  color: #333;
+  font-size: 14px;
+}
+
+.postit input.postit-title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 8px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  background: transparent;
+  transition: border-color 0.3s ease;
+  padding: 4px 0;
+}
+
+.postit input.postit-title:focus {
+  border-color: #007bff;
+}
+
+.postit textarea {
+  flex-grow: 1;
+  resize: none;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  padding: 4px 0;
+  color: #555;
+  outline: none;
+}
+
+.postit .done-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+}
+
+.postit .actions {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.postit .delete-btn {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.postit .delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* Cores personalizadas para post-it */
+.yellow {
+  background-color: #fff475;
+}
+
+.red {
+  background-color: #f28b82;
+}
+
+.blue {
+  background-color: #aecbfa;
+}
+
+.green {
+  background-color: #ccff90;
+}
+
+.login-options {
+  text-align: center;
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+}
