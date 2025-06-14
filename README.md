@@ -7,7 +7,7 @@ Este projeto foi desenvolvido como trabalho final para a disciplina de Teste de 
 * SQLite - Banco de dados temporário.
 
 # **Navegação**
-Os arquivos principais se encontram na pasta "main", e os testes e resultados se encontram nas pastas "cypress/e2e", "postman" e "testes-unitarios".
+Todos os arquivos se encontram no folder GerenciadorProjetos. Os arquivos principais se encontram na pasta "main", e os testes e resultados se encontram nas pastas "cypress/e2e", "postman" e "testes-unitarios".
 
 # **Instalação**
 
