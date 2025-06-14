@@ -1,10 +1,10 @@
 Este projeto foi desenvolvido como trabalho final para a disciplina de Teste de Software da Universidade Católica de Brasília.
 
 # **Ferramentas Utilizadas:**
-Cypress - Testes E2E;
-Jest - Testes unitários;
-Postman - Testes de API;
-SQLite - Banco de dados temporário.
+* Cypress - Testes E2E;
+* Jest - Testes unitários;
+* Postman - Testes de API;
+* SQLite - Banco de dados temporário.
 
 # **Navegação**
 Os arquivos principais se encontram na pasta "main", e os testes e resultados se encontram nas pastas "cypress/e2e", "postman" e "testes-unitarios".
